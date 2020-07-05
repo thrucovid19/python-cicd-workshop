@@ -1,6 +1,6 @@
 variable "project_name" {
   type = string
-  default = "cicd-workshops"
+  default = "thrucovid19"
 }
 
 variable "port_number" {
@@ -25,7 +25,7 @@ data "google_compute_network" "default" {
 
 # Specify the provider (GCP, AWS, Azure)
 provider "google"{
-  credentials = file("cicd_demo_gcp_creds.json")
+  credentials = file("~/circleci.json")
   project = var.project_name
   region = "us-east1-b"
 }
